@@ -4,12 +4,12 @@ import 'semantic-ui-css/semantic.min.css';
 import './app/layout/styles.css';
 import App from './app/layout/App';
 import reportWebVitals from './reportWebVitals';
+import { store, StoreContext } from './app/stores/store';
 
 ReactDOM.render(
-  // Remove React.StrictMode if any 3rd party component blows the strict mode validatio
-  <React.StrictMode>
+  <StoreContext.Provider value={store}>
     <App />
-  </React.StrictMode>,
+  </StoreContext.Provider>,
   document.getElementById('root')
 );
 
